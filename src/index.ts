@@ -1,4 +1,9 @@
-$(document).ready(function () {
+import "./index.html"
+import "./index.scss"
+import $ from 'jquery';
+import 'slick-carousel';
+
+$(function () {
   $(".slider").slick({
     infinite: true,
     slidesToShow: 1,
@@ -36,11 +41,11 @@ $(document).ready(function () {
     centerMode: false,
   });
 
-  $("#burger").click(function () {
+  $("#burger").on( "click", function () {
     $(".navigation").toggleClass("active");
   });
 
-  $(".nav_link").click(function () {
+  $(".nav_link").on( "click", function () {
     $(".navigation").removeClass("active");
   });
 });
